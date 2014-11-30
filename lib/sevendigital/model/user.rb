@@ -71,5 +71,10 @@ module Sevendigital
       @api_client.user.get_add_card_url(return_url, @oauth_access_token, options)
     end
 
+    def create_user(user_id, email, options={})
+      raise Sevendigital::SevendigitalError if !authenticated?
+      @api_client.user.get_create_user(user_id, email, options={})
+    end
+
   end
 end

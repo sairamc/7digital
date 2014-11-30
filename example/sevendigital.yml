@@ -1,6 +1,6 @@
 #Your API access key and secret
-oauth_consumer_key: "YOUR_KEY_HERE"
-oauth_consumer_secret: "YOUR_SECRET_HERE"
+oauth_consumer_key: "7d8e8uvbjvpu"
+oauth_consumer_secret: "a43e8w653x8xxnmn"
 
 #Your website/application name & version
 #this information will be appended to user-agent HTTP headers for all API requests
@@ -8,7 +8,7 @@ app_name: 7digital API Example
 app_version: 0.0.1
 
 #Override base URL for specific APIs
-media_api_version: 
+media_api_version:
 media_api_url: stream.svc.7digital.net
 
 #automatically populate properties
@@ -34,13 +34,13 @@ verbose: very_verbose
 # @client.release.search("radiohead", :country => 'ES', :page_size => 5) -> will return 5 results from spanish catalogue
 
 #end user's location
-#country: GB
+country: US
 
 ##size of images returned by API responses (for valid size please see the 7digital API documentation)
-#image_size: 50
+image_size: 350
 
 #number of items returned in API responses
-#page_size: 20
+page_size: 20
 
 #override default cache-control max-age time provided by API
 cache_max_age:

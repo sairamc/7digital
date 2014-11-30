@@ -40,7 +40,7 @@ module Sevendigital
       warn "[DEPRECATION] 'purchase' is deprecated.  Please use 'purchase_item' instead."
       purchase_item(release_id, track_id, price, token, options)
     end
-      
+
     def purchase_item(release_id, track_id, price, token, options={})
       api_response = @api_client.make_signed_api_request(:GET, "user/purchase/item", \
         {:releaseId => release_id, :trackId => track_id, :price => price}, options, token)
@@ -70,6 +70,11 @@ module Sevendigital
         @api_client.operator.get_request_uri(api_request)
     end
 
+    def get_create_user(user_id, email, options={})
+        api_response = @api_client.make_signed_api_request(:GET, "user/create", {:userId => user_id, :emailAddress => email}, options)
+        user = @api_client.user_digestor.from_xml_doc(api_response.item_xml("user"))
+        user
+    end
 
   end
 
