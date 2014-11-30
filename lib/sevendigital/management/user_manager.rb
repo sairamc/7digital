@@ -70,7 +70,7 @@ module Sevendigital
         @api_client.operator.get_request_uri(api_request)
     end
 
-    def get_create_user(user_id, email, options={})
+    def create_user(user_id, email, options={})
         api_response = @api_client.make_signed_api_request(:GET, "user/create", {:userId => user_id, :emailAddress => email}, options)
         user = @api_client.user_digestor.from_xml_doc(api_response.item_xml("user"))
         user

@@ -1,6 +1,6 @@
 #Your API access key and secret
-oauth_consumer_key: "7d8e8uvbjvpu"
-oauth_consumer_secret: "a43e8w653x8xxnmn"
+oauth_consumer_key: "consumer_key"
+oauth_consumer_secret: "consumer_secret"
 
 #Your website/application name & version
 #this information will be appended to user-agent HTTP headers for all API requests

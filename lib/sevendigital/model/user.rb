@@ -73,7 +73,7 @@ module Sevendigital
 
     def create_user(user_id, email, options={})
       raise Sevendigital::SevendigitalError if !authenticated?
-      @api_client.user.get_create_user(user_id, email, options={})
+      @api_client.user.create_user(user_id, email, options={})
     end
 
   end
